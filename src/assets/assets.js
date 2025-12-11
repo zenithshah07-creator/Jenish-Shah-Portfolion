@@ -58,12 +58,12 @@ export const skills = [
 
 export const projects = [
   {
-    title: "Air Ambulance Services",
-    description: "A Air Ambulance Services website with booking system, real-time tracking, and emergency contact features.",
+    title: "Fly Medical Ambulance",
+    description: "A Fly Medical Ambulance Services website with booking system, real-time tracking, and emergency contact features. Inspired by Red Air Ambulance.",
     image: project,
     tech: ["React", "Tailwind CSS", "Vite",],
     icons: [FaReact, FaNodeJs, FaDatabase, FaStripe],
-    demo: "https://red-air-ambulance.vercel.app/",
+    demo: "https://fly-medical-ambulance.vercel.app/",
     code: "https://github.com/zenithshah07-creator/Red-air-Ambulance-copy",
   },
 
