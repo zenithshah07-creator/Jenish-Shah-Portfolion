@@ -7,10 +7,9 @@ import Projectcard from './Projectcard.jsx'
 const Project = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -50 }}
+      initial={{ opacity: 0, y: -20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
       id='projects'
       className='py-20 bg-dark-200'
     >
@@ -30,7 +29,7 @@ const Project = () => {
 
         </div>
         <div className='text-center mt-12'>
-          <a href="#" className='px-6 py-3 border border-sky-600 rounded-lg font-medium hover:bg-sky-400 tansition decoration-sky-300'>View All Projects</a>
+          <a href="#" className='px-6 py-3 border border-sky-600 rounded-lg font-medium hover:bg-sky-400 transition decoration-sky-300'>View All Projects</a>
           <FaArrowRight className='ml-2' />
         </div>
       </div>

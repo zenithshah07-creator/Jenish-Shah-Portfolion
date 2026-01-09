@@ -15,17 +15,19 @@ const Footer = () => {
 
         <div className='flex justify-center space-x-8 mb-8'>
           {[
-            { Icon: FaGithub, href: '#' },
-            { Icon: FaLinkedin, href: '#' },
-            { Icon: FaTwitter, href: '#' },
-            { Icon: FaInstagram, href: '#' }
-          ].map(({ Icon, href }, index) => (
+            { icon: FaGithub, href: 'https://github.com/zenithshah07-creator' },
+            { icon: FaLinkedin, href: 'https://www.linkedin.com/in/jenish-shah-8a4863382/' },
+            { icon: FaTwitter, href: 'https://x.com/DANAXYZx5?s=09' },
+            { icon: FaInstagram, href: '#' } // Instagram wasn't in Contact.jsx, keeping # or removing
+          ].map((social, index) => (
             <a
               key={index}
-              href={href}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className='text-gray-400 hover:text-sky-400 transform hover:scale-110 transition-all duration-300'
             >
-              <Icon size={24} />
+              <social.icon size={24} />
             </a>
           ))}
         </div>

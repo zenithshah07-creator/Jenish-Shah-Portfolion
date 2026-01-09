@@ -1,5 +1,5 @@
 import React from 'react'
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { assets } from '../assets/assets';
 
 const Hero = () => {
@@ -13,7 +13,10 @@ const Hero = () => {
 
       <div className='container mx-auto px-6 z-10 grid md:grid-cols-2 gap-12 items-center'>
         {/* Left Content */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
           className='space-y-6'
         >
           <div className='inline-block px-4 py-2 bg-dark-200 rounded-full border border-sky-500/30 text-sky-400 text-sm font-medium'>
@@ -45,37 +48,36 @@ const Hero = () => {
               Contact Me
             </a>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Right Image/Graphic */}
-        <div
-          className='relative flex justify-center'
+        {/* Right Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className='relative flex justify-center items-center'
         >
           <div className='relative w-80 h-80 md:w-96 md:h-96'>
-            {/* Spinning Ring */}
-            <div className='absolute inset-0 border-2 border-dashed border-sky-500/30 rounded-full animate-[spin_10s_linear_infinite]'></div>
-            {/* Glowing Backdrop */}
-            <div className='absolute inset-4 bg-gradient-to-br from-sky-500/20 to-purple-500/20 rounded-full blur-2xl'></div>
-
-            <img
+            <div className='absolute inset-0 bg-gradient-to-r from-sky-500 to-purple-600 rounded-full blur-3xl opacity-20 animate-pulse'></div>
+            <motion.img
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className='relative w-full h-full object-cover rounded-full border-4 border-dark-100 shadow-2xl z-10'
               src={assets.profileImg}
               alt="Jenish Shah"
             />
-
-            {/* Floating Badges */}
-            <div
+            <motion.div
               animate={{ y: [10, -10, 10] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
               className='absolute -top-4 -right-4 bg-dark-200 p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-3 z-20'
             >
               <div className='w-3 h-3 bg-green-500 rounded-full animate-ping'></div>
               <span className='text-sm font-medium'>Open to Work</span>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div >
-    </section >
+        </motion.div>
+      </div>
+    </section>
   )
 }
 

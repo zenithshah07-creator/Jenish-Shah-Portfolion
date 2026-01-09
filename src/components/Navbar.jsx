@@ -46,9 +46,14 @@ const Navbar = () => {
               <span className='absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-sky-400 to-purple-500 transition-all duration-300 group-hover:w-full'></span>
             </a>
           ))}
-          <a href="#contact" className="px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-purple-500 rounded-lg hover:shadow-lg hover:shadow-sky-500/20 transition-all duration-300 transform hover:-translate-y-0.5">
-            Hire Me
-          </a>
+          <div className='flex items-center gap-4 border-l border-white/10 pl-6 ml-2'>
+            <a href="/resume.pdf" target="_blank" className='text-gray-300 hover:text-sky-400 text-sm font-medium transition duration-300'>
+              Resume
+            </a>
+            <a href="#contact" className="px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-sky-500 to-blue-600 rounded-lg hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
+              Hire Me
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Icon */}

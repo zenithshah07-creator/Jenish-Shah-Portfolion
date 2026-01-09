@@ -17,7 +17,12 @@ const Contact = () => {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl font-bold mb-4">
             Get In <span className="text-sky-500">Touch</span>
           </h2>
@@ -25,7 +30,7 @@ const Contact = () => {
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
             Have a project in mind or want to collaborate? Let's talk!
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
           {/* Contact Form */}

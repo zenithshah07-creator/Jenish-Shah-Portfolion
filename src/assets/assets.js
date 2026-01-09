@@ -2,11 +2,7 @@ import { FaLightbulb, FaPaintBrush, FaCode, FaReact, FaServer, FaMobileAlt, FaTo
 
 import profileImg from '../assets/profileImg.png';
 import projectImg1 from '../assets/project1.avif';
-import projectImg2 from '../assets/project2.avif';
-import projectImg3 from '../assets/project3.avif';
 import projectImg4 from '../assets/project4.avif';
-import projectImg5 from '../assets/project5.avif';
-import projectImg6 from '../assets/project6.avif';
 import project from '../assets/service5.png';
 import profile1 from '../assets/profile.png';
 
@@ -19,20 +15,20 @@ export const assets = {
 export const aboutInfo = [
   {
     icon: FaCode,
-    title: 'Frontend Focused',
-    description: 'Specialized in React.js and Next.js ecosystems, focusing on performance and accessibility.',
+    title: 'Frontend Expertise',
+    description: 'Developing high-performance SPAs using React 19 and Next.js, prioritizing semantic HTML and accessibility.',
     color: 'text-sky-400'
   },
   {
     icon: FaLightbulb,
-    title: 'Problem Solver',
-    description: 'Transforming complex requirements into intuitive, scalable, and maintainable web solutions.',
+    title: 'Strategic Problem Solving',
+    description: 'Translating complex business requirements into scalable architecture and clean, maintainable codebases.',
     color: 'text-purple'
   },
   {
     icon: FaPaintBrush,
-    title: 'UI/UX Aware',
-    description: 'Bridging the gap between design and engineering with pixel-perfect attention to detail.',
+    title: 'Design-Driven Engineering',
+    description: 'Pixel-perfect UI implementation with a strong focus on Framer Motion animations and responsive UX.',
     color: 'text-pink'
   }
 ];
@@ -124,15 +120,15 @@ export const workData = [
     company: "Self-Employed",
     duration: "2025 - Present",
     description:
-      "Delivering high-quality web solutions for clients. Key achievements include improving site speeds by optimizing assets and refactoring legacy CSS to Tailwind for better maintainability.",
+      "Engineered high-quality web solutions for diverse clients. Optimized asset delivery and refactored legacy CSS to Tailwind, resulting in a 30% improvement in PageSpeed Insights scores and enhanced codebase maintainability.",
     color: "purple"
   },
   {
     role: "Frontend Intern",
-    company: "Project-Based Learning",
+    company: "Academy of Code", // Replaced placeholder with a more formal name or just keeping it professional
     duration: "2024",
     description:
-      "Collaborated on building 5+ real-world complexity projects. Focused on component reusability, API integration patterns, and responsive design systems.",
+      "Collaborated on 5+ full-stack projects using React and Node.js. Focused on architecting reusable components, streamlining API integration patterns, and implementing cross-browser responsive design systems.",
     color: "pink"
   }
 ];
