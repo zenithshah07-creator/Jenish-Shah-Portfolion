@@ -36,13 +36,20 @@ const About = () => {
                 alt="Profile"
                 className="relative z-10 w-80 rounded-2xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105 border border-white/10"
               />
-              <p className="text-gray-400 leading-relaxed">
-                I am currently seeking a <strong>full-time Frontend Developer role</strong> where I can contribute to meaningful projects and continue growing as an engineer.
-              </p>
+              <div className="mt-8 space-y-6">
+                <p className="text-gray-400 leading-relaxed text-base">
+                  I am a results-oriented developer currently seeking a <strong className="text-sky-400">full-time Frontend Developer role</strong>. I specialize in building scalable web architectures and am open to both remote work and relocation.
+                </p>
 
-              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 rounded-lg text-white font-medium hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25">
-                <span>Download Resume</span>
-              </a>
+                <div className="flex flex-wrap gap-4">
+                  <a href="/resume.pdf" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 rounded-lg text-white font-bold hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20">
+                    <span>Download CV</span>
+                  </a>
+                  <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-lg text-gray-300 font-medium hover:border-white hover:text-white transition-all">
+                    <span>Let's Talk</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 

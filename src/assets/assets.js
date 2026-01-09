@@ -37,37 +37,31 @@ export const aboutInfo = [
 
 export const skills = [
   {
-    title: 'Core Frontend',
+    category: 'Languages',
+    icon: FaCode,
+    items: [
+      { name: 'JavaScript (ES6+)', level: 'Comfortable' },
+      { name: 'Node.js', level: 'Currently Learning' }
+    ]
+  },
+  {
+    category: 'Frameworks & Libraries',
     icon: FaReact,
-    description: 'Primary tools for building modern interfaces.',
-    tags: [
-      { name: 'React.js', level: 'Intermediate (2+ years)' },
-      { name: 'Next.js', level: 'Intermediate (1.5+ years)' },
-      { name: 'JavaScript (ES6+)', level: 'Advanced' },
-      { name: 'HTML5/CSS3', level: 'Advanced' },
-      { name: 'Tailwind CSS', level: 'Intermediate (1.5+ years)' }
+    items: [
+      { name: 'React.js', level: 'Comfortable' },
+      { name: 'Next.js', level: 'Comfortable' },
+      { name: 'Tailwind CSS', level: 'Comfortable' },
+      { name: 'Redux Toolkit', level: 'Comfortable' }
     ]
   },
   {
-    title: 'State & API',
-    icon: FaDatabase,
-    description: 'Managing data flow and server communication.',
-    tags: [
-      { name: 'Redux Toolkit', level: 'Intermediate' },
-      { name: 'Context API', level: 'Advanced' },
-      { name: 'TanStack Query', level: 'Beginner' },
-      { name: 'RESTful APIs', level: 'Intermediate' }
-    ]
-  },
-  {
-    title: 'Tools & Ecosystem',
+    category: 'Tools & Platform',
     icon: FaTools,
-    description: 'Workflow and deployment utilities.',
-    tags: [
-      { name: 'Git & GitHub', level: 'Intermediate' },
-      { name: 'Vite', level: 'Advanced' },
-      { name: 'Figma', level: 'Intermediate' },
-      { name: 'Vercel/Netlify', level: 'Advanced' }
+    items: [
+      { name: 'Git & GitHub', level: 'Comfortable' },
+      { name: 'Vercel', level: 'Comfortable' },
+      { name: 'Vite', level: 'Comfortable' },
+      { name: 'Figma', level: 'Comfortable' }
     ]
   }
 ];
@@ -81,6 +75,8 @@ export const projects = [
     problem: "Existing ambulance services lacked real-time tracking and an easy-to-use digital booking interface, leading to delays.",
     solution: "Built a responsive React application with geolocation tracking and a streamlined 3-step booking web form.",
     metrics: "Reduced booking time by ~40% vs phone calls.",
+    ahaMoment: "Solved real-time tracking issues by implementing dynamic geolocation updates, ensuring accurate ambulance ETA for users.",
+    technicalDifficulty: "Integrating complex third-party tracking APIs while maintaining 60fps performance.",
     image: project,
     tech: ["React", "Tailwind CSS", "Vite", "Node.js (Mock)"],
     icons: [FaReact, FaNodeJs, FaDatabase, FaStripe],
@@ -93,6 +89,8 @@ export const projects = [
     problem: "Users struggled with complex goal management apps that were cluttered and difficult to navigate.",
     solution: "Designed a minimalist, drag-and-drop interface using React and local storage for persistence without login friction.",
     metrics: "Achieved 95+ Lighthouse Performance score.",
+    ahaMoment: "Optimized state management using React Context, eliminating unnecessary re-renders in complex list views.",
+    technicalDifficulty: "Implementing a clean drag-and-drop experience without external library bloat.",
     image: projectImg1, // Placeholder
     tech: ["React", "Vite", "Tailwind CSS"],
     icons: [FaReact, FaFire, FaStripe],
@@ -105,6 +103,8 @@ export const projects = [
     problem: "Needed a way to present my work professionally that stands out from generic templates.",
     solution: "Developed a custom performant site using Vite and Framer Motion for smooth, non-intrusive animations.",
     metrics: "Zero layout shift (CLS 0) and <1s LCP.",
+    ahaMoment: "Achieved perfect Lighthouse scores by optimizing asset delivery and using advanced CSS-in-JS patterns.",
+    technicalDifficulty: "Orchestrating complex Framer Motion transitions across multiple page components without performance degradation.",
     image: projectImg4,
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],

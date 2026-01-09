@@ -23,29 +23,30 @@ const Hero = () => {
             Jenish Shah — Frontend Developer
           </div>
 
-          <h1 className='text-5xl md:text-7xl font-bold leading-tight'>
-            Building Fast <br />
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-purple-600 animate-gradient'>
-              Web Applications
+          <h1 className='text-4xl md:text-7xl font-bold leading-tight'>
+            Building High-Performance <br />
+            <span className='text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-blue-500 to-emerald-500 animate-gradient'>
+              Accessible Web Experiences
             </span>
           </h1>
 
-          <p className='text-gray-400 text-lg max-w-lg leading-relaxed'>
-            I build fast, responsive web apps that solve real-world problems using React and Next.js. Focused on performance and clean code.
+          <p className='text-gray-400 text-lg max-w-xl leading-relaxed'>
+            Frontend Specialist at <span className="text-sky-400 font-medium">Academy of Code</span>. I translate complex business needs into scalable React & Next.js architectures that recruiters and users love.
           </p>
 
-          <div className='flex flex-wrap gap-4'>
+          <div className='flex flex-wrap gap-4 pt-2'>
             <a
-              href="#projects"
-              className='px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-xl font-semibold shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 transform hover:-translate-y-1 transition-all duration-300'
+              href="/resume.pdf"
+              target="_blank"
+              className='px-8 py-4 bg-emerald-500 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:-translate-y-1 transition-all duration-300'
             >
-              View Work
+              Get Resume
             </a>
             <a
-              href="#contact"
+              href="#projects"
               className='px-8 py-4 bg-dark-200 border border-white/10 text-white rounded-xl font-semibold hover:bg-white/5 hover:border-white/20 transition-all duration-300'
             >
-              Contact Me
+              View Projects
             </a>
           </div>
         </motion.div>
@@ -69,10 +70,14 @@ const Hero = () => {
             <motion.div
               animate={{ y: [10, -10, 10] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className='absolute -top-4 -right-4 bg-dark-200 p-4 rounded-xl border border-white/10 shadow-xl flex items-center gap-3 z-20'
+              className='absolute -bottom-4 -left-4 bg-dark-200 px-5 py-3 rounded-xl border border-white/10 shadow-xl flex flex-col gap-1 z-20'
             >
-              <div className='w-3 h-3 bg-green-500 rounded-full animate-ping'></div>
-              <span className='text-sm font-medium'>Open to Work</span>
+              <div className="flex items-center gap-2">
+                <div className='w-2 h-2 bg-green-500 rounded-full animate-ping'></div>
+                <span className='text-xs font-bold uppercase tracking-wider text-gray-300'>Availability</span>
+              </div>
+              <span className='text-sm font-medium text-white'>Open to Remote / Relocation</span>
+              <span className='text-[10px] text-gray-500 font-medium'>Currently in Kathmandu, NP</span>
             </motion.div>
           </div>
         </motion.div>
