@@ -1,91 +1,71 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { assets, aboutInfo } from "../assets/assets";
 
 const About = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      // animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true }}
-      id="about"
-      className="py-20 bg-dark-200"
-    >
-      <div className="container mx-0 px-6">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center mb-4">
-          About
-          <span className="text-sky-400">Me</span>
-        </h2>
-        <p className="text-gray-400 text-center max-w-2xl mx-auto mb-16 ">
-          Get to know more about my background and passion
-        </p>
-        {/* image my journey */}
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="md:w-1/2 rounded-2xl overflow-hidden">
-            <motion.img
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              // animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.2 }}
-              className="w-full h-full object-cover"
-              src={assets.profile1}
-              alt="profile"
-            />
+    <section id="about" className="py-20 bg-dark-200 relative overflow-hidden">
+      {/* Background Shapes */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-sky-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">
+            About <span className="text-sky-400">Me</span>
+          </h2>
+          <div className="w-16 h-1 bg-sky-500 mx-auto rounded-full"></div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Profile Image Column */}
+          <div className="flex justify-center">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-purple-600 rounded-2xl rotate-6 group-hover:rotate-12 transition-transform duration-500 opacity-30 blur-lg"></div>
+              <img
+                src={assets.profile1}
+                alt="Profile"
+                className="relative z-10 w-80 rounded-2xl shadow-2xl transform transition-transform duration-500 group-hover:scale-105 border border-white/10"
+              />
+            </div>
           </div>
 
-          <div>
-            {/* Text Contain */}
-            <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.2 }}
-              className="md:w-1/2"
-            >
-              <div className="rounded-2xl p-8">
-                <h3 className="text-2xl font-semibold mb-6">My Journey</h3>
-                <p className="text-gray-300 mb-6">
-                  I'm passionate Front End developer with over years of learning
-                  experience creating a digital solution for a business around
-                  the world. my journey started with basic HTML/CSS website and
-                  has evolved into building a complex web application with
-                  modern frameworks.
-                </p>
-                <p className="text-gray-300 mb-6">
-                  When I'm not coding you can find me exploring new technology,
-                  contributing to open source project, or sharing my knowledge
-                  through tech blogs and tutorials.I believed in continuous
-                  learning and pausing the boundaries of what's possible on the
-                  web.
-                </p>
+          {/* Content Column */}
+          <div className="space-y-8">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-white">
+                Designing with Passion, <br /> Developing with Precision.
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                I am a specialized Front-End Developer with a focus on building scalable web applications using React.js and Next.js. My approach combines clean code architecture with pixel-perfect design implementation.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                I am currently seeking a <strong>full-time Frontend Developer role</strong> where I can contribute to meaningful projects and continue growing as an engineer.
+              </p>
 
-                {/* cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {aboutInfo.map((data, index) => (
-                    <div
-                      key={index}
-                      className="bg-dark-300 rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-2 cursor-pointer"
-                    >
-                      <div className="text-sky-500 text-4xl mb-4">
-                        <data.icon />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-3">
-                        {data.title}
-                      </h3>
-                      <p className="text-gray-400">{data.description}</p>
-                    </div>
-                  ))}
+              <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-sky-600 rounded-lg text-white font-medium hover:bg-sky-500 transition-colors shadow-lg shadow-sky-500/25">
+                <span>Download Resume</span>
+              </a>
+            </div>
+
+            {/* Bento Grid Stats/Info */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {aboutInfo.map((data, index) => (
+                <div
+                  key={index}
+                  className="bg-dark-300/50 p-6 rounded-xl border border-white/5 hover:border-sky-500/30 hover:bg-dark-300 transition-all duration-300"
+                >
+                  <div className={`text-3xl mb-3 ${data.color || 'text-sky-400'}`}>
+                    <data.icon />
+                  </div>
+                  <h4 className="text-lg font-semibold text-white mb-2">{data.title}</h4>
+                  <p className="text-sm text-gray-400">{data.description}</p>
                 </div>
-              </div>
-            </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </motion.div>
+    </section>
   );
 };
 

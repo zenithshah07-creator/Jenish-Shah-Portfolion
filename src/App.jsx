@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.jsx'
 
 const App = () => {
   return (
-    <div>
+    <div className='min-h-screen bg-dark-100 text-gray-100'>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />

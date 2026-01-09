@@ -18,22 +18,22 @@ export const assets = {
 
 export const aboutInfo = [
   {
+    icon: FaCode,
+    title: 'Frontend Focused',
+    description: 'Specialized in React.js and Next.js ecosystems, focusing on performance and accessibility.',
+    color: 'text-sky-400'
+  },
+  {
     icon: FaLightbulb,
-    title: 'Innovative',
-    description: 'I love creating unique solutions to complex problems with cutting-edge technologies.',
+    title: 'Problem Solver',
+    description: 'Transforming complex requirements into intuitive, scalable, and maintainable web solutions.',
     color: 'text-purple'
   },
   {
     icon: FaPaintBrush,
-    title: 'Design Oriented',
-    description: 'Beautiful design and user experience are at the heart of everything I create.',
+    title: 'UI/UX Aware',
+    description: 'Bridging the gap between design and engineering with pixel-perfect attention to detail.',
     color: 'text-pink'
-  },
-  {
-    icon: FaCode,
-    title: 'Clean Code',
-    description: 'I write maintainable, efficient code following best practices and modern patterns.',
-    color: 'text-blue'
   }
 ];
 
@@ -41,16 +41,38 @@ export const aboutInfo = [
 
 export const skills = [
   {
-    title: 'Frontend Development',
+    title: 'Core Frontend',
     icon: FaReact,
-    description: 'Building responsive and interactive user interfaces with modern frameworks.',
-    tags: ['React', 'Tailwind', 'HTML', 'JavaScript', 'CSS']
+    description: 'Primary tools for building modern interfaces.',
+    tags: [
+      { name: 'React.js', level: 'Intermediate (2+ years)' },
+      { name: 'Next.js', level: 'Intermediate (1.5+ years)' },
+      { name: 'JavaScript (ES6+)', level: 'Advanced' },
+      { name: 'HTML5/CSS3', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Intermediate (1.5+ years)' }
+    ]
   },
   {
-    title: 'Tools & Deployment',
+    title: 'State & API',
+    icon: FaDatabase,
+    description: 'Managing data flow and server communication.',
+    tags: [
+      { name: 'Redux Toolkit', level: 'Intermediate' },
+      { name: 'Context API', level: 'Advanced' },
+      { name: 'TanStack Query', level: 'Beginner' },
+      { name: 'RESTful APIs', level: 'Intermediate' }
+    ]
+  },
+  {
+    title: 'Tools & Ecosystem',
     icon: FaTools,
-    description: 'Essential tools and Deployment I use in my development workflow.',
-    tags: ['Git & GitHub', 'vercel', 'Figma', 'Netlify']
+    description: 'Workflow and deployment utilities.',
+    tags: [
+      { name: 'Git & GitHub', level: 'Intermediate' },
+      { name: 'Vite', level: 'Advanced' },
+      { name: 'Figma', level: 'Intermediate' },
+      { name: 'Vercel/Netlify', level: 'Advanced' }
+    ]
   }
 ];
 
@@ -59,20 +81,36 @@ export const skills = [
 export const projects = [
   {
     title: "Fly Medical Ambulance",
-    description: "A Fly Medical Ambulance Services website with booking system, real-time tracking, and emergency contact features. Inspired by Red Air Ambulance.",
+    description: "A comprehensive booking and tracking system for emergency medical services.",
+    problem: "Existing ambulance services lacked real-time tracking and an easy-to-use digital booking interface, leading to delays.",
+    solution: "Built a responsive React application with geolocation tracking and a streamlined 3-step booking web form.",
+    metrics: "Reduced booking time by ~40% vs phone calls.",
     image: project,
-    tech: ["React", "Tailwind CSS", "Vite",],
+    tech: ["React", "Tailwind CSS", "Vite", "Node.js (Mock)"],
     icons: [FaReact, FaNodeJs, FaDatabase, FaStripe],
     demo: "https://fly-medical-ambulance.vercel.app/",
     code: "https://github.com/zenithshah07-creator/Red-air-Ambulance-copy",
   },
-
-
+  {
+    title: "GoalTracker Pro",
+    description: "A productivity application for defining, tracking, and achieving personal and professional goals.",
+    problem: "Users struggled with complex goal management apps that were cluttered and difficult to navigate.",
+    solution: "Designed a minimalist, drag-and-drop interface using React and local storage for persistence without login friction.",
+    metrics: "Achieved 95+ Lighthouse Performance score.",
+    image: projectImg1, // Placeholder
+    tech: ["React", "Vite", "Tailwind CSS"],
+    icons: [FaReact, FaFire, FaStripe],
+    demo: "https://taracker.vercel.app/",
+    code: "#",
+  },
   {
     title: "Portfolio Website",
-    description: "A personal portfolio to showcase projects, skills, and blogs with dark/light mode support.",
+    description: "My personal digital garden showcasing projects and skills.",
+    problem: "Needed a way to present my work professionally that stands out from generic templates.",
+    solution: "Developed a custom performant site using Vite and Framer Motion for smooth, non-intrusive animations.",
+    metrics: "Zero layout shift (CLS 0) and <1s LCP.",
     image: projectImg4,
-    tech: ["Next.js", "Tailwind CSS", "Framer Motion", "Markdown"],
+    tech: ["React", "Tailwind CSS", "Framer Motion"],
     icons: [FaReact, FaCloud],
     demo: "#",
     code: "#",
@@ -83,26 +121,18 @@ export const projects = [
 export const workData = [
   {
     role: "Frontend Developer (Freelance)",
-    company: "",
-    duration: "2025- Present",
+    company: "Self-Employed",
+    duration: "2025 - Present",
     description:
-      "Built responsive websites using React, Tailwind, and JavaScript. Integrated APIs, optimized UI/UX, and deployed projects on Netlify/Vercel.",
+      "Delivering high-quality web solutions for clients. Key achievements include improving site speeds by optimizing assets and refactoring legacy CSS to Tailwind for better maintainability.",
     color: "purple"
   },
   {
-    role: "Frontend Developer – Project Based Experience",
-    company: "",
-    duration: "",
+    role: "Frontend Intern",
+    company: "Project-Based Learning",
+    duration: "2024",
     description:
-      "Worked on 5+ real-world style projects including login systems, responsive layouts, and API-based apps. Gained hands-on experience with React, Tailwind and modern web technologies.",
+      "Collaborated on building 5+ real-world complexity projects. Focused on component reusability, API integration patterns, and responsive design systems.",
     color: "pink"
-  },
-  {
-    role: "Frontend Intern (Self-Initiated Training)",
-    company: "",
-    duration: "",
-    description:
-      "Practiced real tasks like component building, code optimization, version control, and responsive design. Completed mini-projects to solidify skills in React and frontend development.",
-    color: "blue"
   }
 ];

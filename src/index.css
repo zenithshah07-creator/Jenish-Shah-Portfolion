@@ -1,54 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 * {
-  font-family: saira, sans-serif;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
 }
 
 @theme {
+  --color-dark-100: #0a0a0a;
+  --color-dark-200: #121212;
+  --color-dark-300: #1a1a1a;
+  --color-dark-400: #2a2a2a;
+  
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  
+  --color-accent-purple: #8b5cf6;
+  --color-accent-pink: #ec4899;
+  --color-accent-cyan: #06b6d4;
 
-  --color-dark-100: #1a1a1a;
-  --color-dark-200: #2f2f2f;
-  --color-dark-300: #2d2d2d;
-  --color-dark-400: #3d3d3d;
-  --color-purple: #8B5CF6;
-  --color-pink: #EC4899;
-  --color-blue: #3B82F6;
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
 }
 
+body {
+  @apply bg-dark-100 text-gray-200 antialiased overflow-x-hidden;
+}
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-400 rounded-full hover:bg-dark-300 transition;
+}
+
+::selection {
+  @apply bg-sky-500/30 text-sky-200;
+}
+
+/* Utilities */
+.glass {
+  @apply bg-dark-200/50 backdrop-blur-lg border border-white/5;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 to-purple-500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .typewriter {
   overflow: hidden;
-  border-right: 0.15em solid #23abe1;
+  border-right: 0.15em solid #0ea5e9;
   white-space: nowrap;
   letter-spacing: 0.10em;
-  animation:
-    typing 3.5s steps(19, end) forwards,
-    blink-caret .75s step-end infinite;
+  animation: typing 3.5s steps(19, end) forwards, blink-caret .75s step-end infinite;
   display: inline-block;
   width: 0;
 }
 
 @keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 19ch;
-  }
+  from { width: 0 }
+  to { width: 100% }
 }
 
 @keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent
-  }
-
-  50% {
-    border-color: #23abe1;
-  }
+  from, to { border-color: transparent }
+  50% { border-color: #0ea5e9; }
 }
