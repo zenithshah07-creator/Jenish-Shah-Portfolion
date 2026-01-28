@@ -41,6 +41,9 @@ const About = () => {
                 <p className="text-gray-400 leading-relaxed text-base">
                   I am a results-oriented developer currently seeking a <strong className="text-sky-400">full-time Frontend Developer role</strong>. I specialize in building scalable web architectures and am open to both remote work and relocation.
                 </p>
+                <p className="text-gray-400 leading-relaxed text-base pt-2">
+                  Hi, I'm <strong className="text-white">Jenish Shah</strong>. I build high-performance web applications using React and Next.js. My portfolio showcases my journey as a <strong className="text-sky-400">Frontend Developer</strong> solving real-world problems.
+                </p>
 
                 <div className="flex flex-wrap gap-4">
                   <a
