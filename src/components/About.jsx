@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { assets, aboutInfo } from "../assets/assets";
+import { trackEvent } from "../utils/analytics";
 
 const About = () => {
   return (
@@ -42,7 +43,12 @@ const About = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-4">
-                  <a href="/resume.pdf" target="_blank" className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 rounded-lg text-white font-bold hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20">
+                  <a
+                    href="/JenishShahResume.pdf"
+                    target="_blank"
+                    onClick={() => trackEvent('Resume', 'Download', 'About Section')}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 rounded-lg text-white font-bold hover:bg-emerald-400 transition-all shadow-lg shadow-emerald-500/20"
+                  >
                     <span>Download CV</span>
                   </a>
                   <a href="#contact" className="inline-flex items-center gap-2 px-6 py-3 border border-white/10 rounded-lg text-gray-300 font-medium hover:border-white hover:text-white transition-all">

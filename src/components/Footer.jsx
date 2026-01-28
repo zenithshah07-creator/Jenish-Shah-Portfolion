@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { trackEvent } from '../utils/analytics'
 
 const Footer = () => {
   return (
@@ -18,13 +19,19 @@ const Footer = () => {
             { icon: FaGithub, href: 'https://github.com/zenithshah07-creator' },
             { icon: FaLinkedin, href: 'https://www.linkedin.com/in/jenish-shah-8a4863382/' },
             { icon: FaTwitter, href: 'https://x.com/DANAXYZx5?s=09' },
-            { icon: FaInstagram, href: '#' } // Instagram wasn't in Contact.jsx, keeping # or removing
+            { icon: FaInstagram, href: '#' },
+            {
+              icon: () => <span className="font-bold text-xs border border-current px-1 rounded">CV</span>,
+              href: '/JenishShahResume.pdf',
+              onClick: () => trackEvent('Resume', 'Download', 'Footer')
+            }
           ].map((social, index) => (
             <a
               key={index}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={social.onClick}
               className='text-gray-400 hover:text-sky-400 transform hover:scale-110 transition-all duration-300'
             >
               <social.icon size={24} />

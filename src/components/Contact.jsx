@@ -99,8 +99,8 @@ const Contact = () => {
             <div className="space-y-6">
               {[
                 { icon: FaMapMarkedAlt, title: "Location", value: "Kathmandu, Nepal", color: "text-purple-500" },
-                { icon: FaEnvelope, title: "Email", value: "zenithshah07@gmail.com", color: "text-sky-500" },
-                { icon: FaPhone, title: "Phone", value: "+977 9805129944", color: "text-green-500" },
+                { icon: FaEnvelope, title: "Email", value: "zenithshah07@gmail.com", color: "text-sky-500", href: "mailto:zenithshah07@gmail.com" },
+                { icon: FaPhone, title: "Phone", value: "+977 9805129944", color: "text-green-500", href: "https://wa.me/9779805129944" },
               ].map((item, index) => (
                 <div key={index} className="flex items-center space-x-6 bg-dark-300/50 p-4 rounded-xl border border-white/5 hover:bg-dark-300 transition-colors duration-300">
                   <div className={`w-14 h-14 ${item.color} bg-white/5 rounded-full flex items-center justify-center text-2xl`}>
@@ -108,7 +108,18 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="text-gray-400 text-sm font-medium">{item.title}</h4>
-                    <p className="text-white font-semibold text-lg">{item.value}</p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white font-semibold text-lg hover:text-sky-400 transition-colors block"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-white font-semibold text-lg">{item.value}</p>
+                    )}
                   </div>
                 </div>
               ))}

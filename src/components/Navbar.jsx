@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { FaBars, FaXmark } from 'react-icons/fa6'
+import { trackEvent } from '../utils/analytics';
 
 const Navbar = () => {
 
@@ -47,7 +48,12 @@ const Navbar = () => {
             </a>
           ))}
           <div className='flex items-center gap-4 border-l border-white/10 pl-6 ml-2'>
-            <a href="/resume.pdf" target="_blank" className='text-gray-300 hover:text-white text-sm font-medium transition duration-300'>
+            <a
+              href="/JenishShahResume.pdf"
+              target="_blank"
+              onClick={() => trackEvent('Resume', 'Download', 'Navbar')}
+              className='text-gray-300 hover:text-white text-sm font-medium transition duration-300'
+            >
               Resume
             </a>
             <a href="#contact" className="px-5 py-2 text-sm font-bold text-white bg-sky-500 rounded-lg hover:bg-sky-400 hover:shadow-lg hover:shadow-sky-500/40 transition-all duration-300 transform hover:-translate-y-0.5 ring-2 ring-sky-500/20">

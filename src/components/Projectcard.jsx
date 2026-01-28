@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
+import { trackEvent } from "../utils/analytics";
 
 const Projectcard = ({ title, description, metrics, ahaMoment, technicalDifficulty, image, tech, demo, code }) => {
   return (
@@ -76,6 +77,7 @@ const Projectcard = ({ title, description, metrics, ahaMoment, technicalDifficul
             href={demo}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('Project', 'View Demo', title)}
             className="flex-1 text-center bg-sky-600/90 text-white rounded-lg px-4 py-2.5 text-sm font-bold hover:bg-sky-500 hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300"
           >
             Live Demo
@@ -84,6 +86,7 @@ const Projectcard = ({ title, description, metrics, ahaMoment, technicalDifficul
             href={code}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackEvent('Project', 'View Code', title)}
             className="flex-1 text-center px-4 py-2.5 text-sm font-bold border border-white/10 text-gray-400 rounded-lg hover:border-white hover:text-white hover:bg-white/5 transition-all duration-300"
           >
             Code

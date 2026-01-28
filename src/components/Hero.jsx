@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { assets } from '../assets/assets';
+import { trackEvent } from '../utils/analytics';
 
 const Hero = () => {
   return (
@@ -36,8 +37,9 @@ const Hero = () => {
 
           <div className='flex flex-wrap gap-4 pt-2'>
             <a
-              href="/resume.pdf"
+              href="/JenishShahResume.pdf"
               target="_blank"
+              onClick={() => trackEvent('Resume', 'Download', 'Hero Section')}
               className='px-8 py-4 bg-emerald-500 text-white rounded-xl font-bold shadow-lg shadow-emerald-500/30 hover:shadow-emerald-500/50 transform hover:-translate-y-1 transition-all duration-300'
             >
               Get Resume
